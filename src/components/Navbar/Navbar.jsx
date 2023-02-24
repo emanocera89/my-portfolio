@@ -1,6 +1,13 @@
+import Menu from "../Menu/Menu";
+
 function Navbar() {
     return (
-        <header>Navbar</header>
+        <header>
+            <div className="container">
+                <div className="logo">Logo goes here!</div>
+                <Menu />
+            </div>
+        </header>
     )
 }
 
