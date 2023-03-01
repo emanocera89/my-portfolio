@@ -1,0 +1,31 @@
+footer {
+    text-align: center;
+
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        margin: 100px auto 0;
+
+        h3 {
+            font-size: 64px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .social {
+            display: flex;
+            margin: auto;
+            font-size: 18px;
+
+            ul {
+                gap: 50px;
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 100px;
+        padding: 60px 0;
+        border-top: solid hsla(0,0%,100%,.1);
+    }
+}

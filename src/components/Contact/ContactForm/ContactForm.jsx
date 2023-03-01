@@ -23,22 +23,22 @@ function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="contact-form">
             <label>
-                Full Name:
+                Full Name
                 <input type="text" name="fullName" value={values.fullName} onChange={handleChange} />
             </label>
             <label>
-                Email:
+                Email
                 <input type="email" name="email" value={values.email} onChange={handleChange} />
             </label>
             <label>
-                Subject:
+                Subject
                 <input type="text" name="subject" value={values.subject} onChange={handleChange} />
             </label>
             <label>
-                Message:
-                <textarea name="message" value={values.message} onChange={handleChange} />
+                Message
+                <textarea name="message" value={values.message} rows="4" onChange={handleChange} />
             </label>
             <button type="submit">Submit</button>
         </form>

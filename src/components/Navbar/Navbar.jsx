@@ -2,9 +2,9 @@ import Menu from "../Menu/Menu";
 
 function Navbar() {
     return (
-        <header>
+        <header className="navbar">
             <div className="container">
-                <div className="logo">Logo goes here!</div>
+                <div className="logo">Emmanuel Nocera</div>
                 <Menu />
             </div>
         </header>

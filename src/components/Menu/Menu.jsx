@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { AiOutlineMenu } from 'react-icons/ai';
+
 
 function Menu() {
     const [isOpen, setIsOpen] = useState(false);
@@ -7,14 +9,14 @@ function Menu() {
     }
     return (
         <>
-            <button onClick={handleToggleMenu}>Toggle Menu</button>
+            <button className="toggle-button" onClick={handleToggleMenu}><AiOutlineMenu /></button>
             {isOpen &&
                 <div className="menu">
                     <ul>
-                        <li><a href="/" title="Home">Home</a></li>
-                        <li><a href="/#projects" title="Projects">Projects</a></li>
-                        <li><a href="/resume" title="Resume">Resume</a></li>
-                        <li><a href="/#contact" title="Contact">Contact</a></li>
+                        <li><a href="/" title="Home" onClick={handleToggleMenu}>Home</a></li>
+                        <li><a href="/#projects" title="Projects" onClick={handleToggleMenu}>Projects</a></li>
+                        <li><a href="/resume" title="Resume" onClick={handleToggleMenu}>Resume</a></li>
+                        <li><a href="/#contact" title="Contact" onClick={handleToggleMenu}>Contact</a></li>
                     </ul>
                 </div>
             }

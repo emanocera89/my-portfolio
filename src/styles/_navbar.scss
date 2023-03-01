@@ -1,0 +1,42 @@
+@import './variables';
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    .toggle-button {
+        font-size: 28px;
+        padding: 10px 0;
+        height: auto;
+        display: flex;
+        color: $font-color;
+        background: transparent;
+        position: relative;
+        z-index: 2;
+        border: none;
+    }
+}
+
+.menu {
+    background-color: $background-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+
+    ul {
+        max-width: 600px;
+        margin: auto;
+
+        a {
+            line-height: 1;
+            font-size: 80px;
+            font-weight: 500;
+        }
+    }
+}

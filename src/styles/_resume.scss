@@ -1,0 +1,96 @@
+@import './variables';
+
+.resume {
+    background-color: #fff;
+    color: #000;
+    padding: 100px 0;
+
+    .resume-item {
+        .about-text {
+            font-size: 18px;
+        }
+
+        margin-bottom: 70px;
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .experience-item {
+            margin-bottom: 50px;
+
+            .title {
+                font-size: 18px;
+                font-weight: 600;
+                color: $color-secondary;
+            }
+
+            .subtitle {
+                color: #666;
+                font-size: 14px;
+                margin-bottom: 20px;
+                display: block;
+            }
+        }
+
+        &.contact-list {
+            ul {
+                li {
+                    margin-bottom: 16px;
+
+                    a {
+                        text-decoration: underline;
+                        color: $color-secondary;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .content {
+        position: relative;
+        z-index: 1;
+
+
+    }
+
+    .personal-info {
+        position: initial;
+
+
+        @media (min-width: 992px) {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+        }
+
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .fullname {
+            font-size: 28px;
+            margin-bottom: 0;
+        }
+
+        .profession {
+            color: $color-secondary;
+            font-weight: 600;
+        }
+
+        a {
+            font-size: 14px;
+            color: #666666;
+            text-decoration: underline;
+        }
+
+
+    }
+}
