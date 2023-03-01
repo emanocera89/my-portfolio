@@ -1,6 +1,6 @@
-function Experience({ sectionTitle = 'Default Title', data }) {
+function Experience({ sectionTitle = 'Default Title', data, ...rest }) {
     return (
-        <div className="resume-item">
+        <div className="resume-item" {...rest}>
             <h3>{sectionTitle}</h3>
             {data && data.map((item) => (
                 <div className="experience-item">

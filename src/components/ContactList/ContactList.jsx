@@ -1,6 +1,6 @@
-function ContactList() {
+function ContactList({...rest}) {
     return (
-        <div className="resume-item contact-list">
+        <div className="resume-item contact-list" {...rest}>
             <h3>Contact</h3>
             <ul>
                 <li><a href="#" title="Whatsapp">Whatsapp</a></li>
