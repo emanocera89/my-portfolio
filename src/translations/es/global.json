@@ -1,0 +1,35 @@
+{
+    "sections": {
+        "home": "Home",
+        "projects": "Proyectos",
+        "resume": "Curriculum",
+        "contact": "Contacto"
+    },
+    "project": {
+        "category": "Categoría",
+        "client": "Cliente",
+        "live_link": "Link directo",
+        "source_code": "Código fuente"
+    },
+    "contact": {
+        "title": "Contacto",
+        "whatsapp": "Whatsapp",
+        "email": "Email",
+        "office": "Oficina",
+        "full_name": "Nombre completo",
+        "subject": "Asunto",
+        "message": "Mensaje",
+        "submit": "Enviar"
+    },
+    "footer": {
+        "title": "Trabajemos juntos en tu siguiente proyecto"
+    },
+    "resume": {
+        "about_me": "Acerca de mi",
+        "experience": "Experiencia",
+        "education": "Educación",
+        "features": "Features",
+        "contact": "Contacto"
+    }
+    
+}

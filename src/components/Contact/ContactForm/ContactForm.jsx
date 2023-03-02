@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from "react-i18next";
 
 function ContactForm() {
 
@@ -8,6 +9,8 @@ function ContactForm() {
         subject: '',
         message: ''
     });
+
+    const [t] = useTranslation("global");
 
     function handleChange(event) {
         const { name, value } = event.target;
@@ -25,22 +28,22 @@ function ContactForm() {
     return (
         <form onSubmit={handleSubmit} className="contact-form">
             <label>
-                Full Name
+                {t("contact.full_name")}
                 <input type="text" name="fullName" value={values.fullName} onChange={handleChange} />
             </label>
             <label>
-                Email
+                {t("contact.email")}
                 <input type="email" name="email" value={values.email} onChange={handleChange} />
             </label>
             <label>
-                Subject
+                {t("contact.subject")}
                 <input type="text" name="subject" value={values.subject} onChange={handleChange} />
             </label>
             <label>
-                Message
+                {t("contact.message")}
                 <textarea name="message" value={values.message} rows="4" onChange={handleChange} />
             </label>
-            <button type="submit">Submit</button>
+            <button type="submit">{t("contact.submit")}</button>
         </form>
     )
 }

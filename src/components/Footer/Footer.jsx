@@ -1,11 +1,13 @@
 import Social from "../Social/Social";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+    const [t] = useTranslation("global");
     return (
         <footer>
             <div className="container">
                 <div className="footer-contact">
-                    <h3>Let’s work together on your next project</h3>
+                    <h3>{t("footer.title")}</h3>
                     <Social />
                 </div>
                 <div className="copyright">

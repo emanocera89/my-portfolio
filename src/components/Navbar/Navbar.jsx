@@ -1,6 +1,8 @@
 import Menu from "../Menu/Menu";
 
+
 function Navbar() {
+    
     return (
         <header className="navbar">
             <div className="container">

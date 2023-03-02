@@ -1,0 +1,34 @@
+{
+    "sections": {
+        "home": "Home",
+        "projects": "Projects",
+        "resume": "Resume",
+        "contact": "Contact"
+    },
+    "project": {
+        "category": "Category",
+        "client": "Client",
+        "live_link": "Live link",
+        "source_code": "Source code"
+    },
+    "contact": {
+        "title": "Contact",
+        "whatsapp": "whatsapp",
+        "email": "Email",
+        "office": "Office",
+        "full_name": "Full Name",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Submit"
+    },
+    "footer": {
+        "title": "Let’s work together on your next project"
+    },
+    "resume": {
+        "about_me": "About me",
+        "experience": "Experience",
+        "education": "Education",
+        "features": "Features",
+        "contact": "Contact"
+    }
+}

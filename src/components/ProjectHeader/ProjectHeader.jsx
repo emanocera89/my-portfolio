@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 function ProjectHeader() {
+    const [t] = useTranslation("global");
     return (
         <div className="project-header">
             <div className="container">
@@ -7,10 +10,10 @@ function ProjectHeader() {
                     <div className="col-lg-6 details">
 
                         <ul className="detail-list">
-                            <li><label>Category: </label><span>Project Category</span></li>
-                            <li><label>Client: </label><span>Client Name</span></li>
-                            <li><label>Live Link: </label><span>Live link</span></li>
-                            <li><label>Source Code: </label><span>Github link?</span></li>
+                            <li><label>{t("project.category")}: </label><span>Project Category</span></li>
+                            <li><label>{t("project.client")}: </label><span>Client Name</span></li>
+                            <li><label>{t("project.live_link")}: </label><span>Live link</span></li>
+                            <li><label>{t("project.source_code")}: </label><span>Github link?</span></li>
                         </ul>
                     </div>
                     <div className="col-lg-6">
