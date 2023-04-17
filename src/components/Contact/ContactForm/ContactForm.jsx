@@ -28,20 +28,16 @@ function ContactForm() {
     return (
         <form onSubmit={handleSubmit} className="contact-form">
             <label>
-                {t("contact.full_name")}
-                <input type="text" name="fullName" value={values.fullName} onChange={handleChange} />
+                <input type="text" name="fullName" value={values.fullName} onChange={handleChange} required placeholder={t("contact.full_name")  + '*'} />
             </label>
             <label>
-                {t("contact.email")}
-                <input type="email" name="email" value={values.email} onChange={handleChange} />
+                <input type="email" name="email" value={values.email} onChange={handleChange} required placeholder={t("contact.email") + '*'} />
             </label>
             <label>
-                {t("contact.subject")}
-                <input type="text" name="subject" value={values.subject} onChange={handleChange} />
+                <input type="text" name="subject" value={values.subject} onChange={handleChange} required placeholder={t("contact.subject")  + '*'} />
             </label>
             <label>
-                {t("contact.message")}
-                <textarea name="message" value={values.message} rows="4" onChange={handleChange} />
+                <textarea name="message" value={values.message} rows="4" onChange={handleChange} required placeholder={t("contact.message")  + '*'} />
             </label>
             <button type="submit">{t("contact.submit")}</button>
         </form>

@@ -4,7 +4,7 @@ footer {
     .footer-contact {
         display: flex;
         flex-direction: column;
-        margin: 100px auto 0;
+        margin: 80px auto 0;
 
         h3 {
             font-size: 64px;
@@ -15,10 +15,9 @@ footer {
         .social {
             display: flex;
             margin: auto;
-            font-size: 18px;
-
             ul {
-                gap: 50px;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
         }
     }

@@ -3,13 +3,15 @@ import { useTranslation } from "react-i18next";
 
 function ResumeNav() {
     const [t, i18n] = useTranslation("global");
-
-
+    
     const handleChangeLang = (e, lang) => {
         i18n.changeLanguage(lang);
         localStorage.setItem('lang', lang);
         //alert(lang);
     }
+
+    
+
     return (
         <header className="resume-nav">
             <nav className="container">

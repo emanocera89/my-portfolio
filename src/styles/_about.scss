@@ -1,5 +1,6 @@
 .about {
-
+    background: url('../assets/computadora-cafe.jpg') no-repeat center bottom;
+    background-size: 1400px;
     .container {
         //padding: 200px 0;
         display: flex;
@@ -14,13 +15,7 @@
                 max-width: 90%;
             }
 
-            .social {
-                font-size: 18px;
-    
-                ul {
-                    gap: 50px;
-                }
-            }
+            
 
         }
 

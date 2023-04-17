@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlineMenu } from 'react-icons/ai';
+import { IoCloseSharp } from 'react-icons/io5';
 import { useTranslation } from "react-i18next";
 
 function Menu() {
@@ -14,7 +15,10 @@ function Menu() {
     
     return (
         <>
-            <button className="toggle-button" onClick={handleToggleMenu}><AiOutlineMenu /></button>
+            <button className="toggle-button" onClick={handleToggleMenu}>
+                {isOpen ? <IoCloseSharp className="icon-close" /> : <AiOutlineMenu className="icon-menu" />}
+                
+            </button>
             {isOpen &&
                 <div className="menu">
                     <ul>

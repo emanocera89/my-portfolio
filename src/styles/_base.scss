@@ -8,6 +8,10 @@ body {
     color: $font-color;
 }
 
+a:hover {
+    color: $color-primary;
+}
+
 /*.container {
     padding: 0 60px;
     margin-left: auto;
