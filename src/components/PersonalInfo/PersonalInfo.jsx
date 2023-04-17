@@ -4,9 +4,9 @@ function PersonalInfo() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 wrapper">
-                        <img src="" alt="Personal Pic" />
+                        <div className="photo-wrapper"><img src="" alt="Personal Pic" width="100%" /></div>
                         <h3 className="fullname">Emmanuel Nocera</h3>
-                        <span className="profession">Frontend developer and UI designer</span>
+                        <span className="profession">Frontend dev / UI designer</span>
                         <span className="location">Buenos Aires, Argentina</span>
                         <a href="/" title="website" className="website" target="_blank">www.emmanuelnocera.com</a>
                         <a href="/" title="email" className="email">contact@emmanuelnocera.com</a>

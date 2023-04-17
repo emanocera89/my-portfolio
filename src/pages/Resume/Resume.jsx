@@ -10,17 +10,23 @@ const about = "I’m an independent visual designer. For the last 7 years I’ve
 
 const experience = [
     {
-        title: "Lead Product Designer @ Visit.Page",
+        title: "Ssr. Frontend Developer",
+        company: "Artear",
+        website: "https://www.artear.com/es/",
         subtitle: "Jan '18 - Oct '21",
         description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
     },
     {
-        title: "Lead Product Designer @ Visit.Page",
+        title: "Lead UI Designer",
+        company: "Contabilium",
+        website: "https://www.contabilium.com",
         subtitle: "Jan '18 - Oct '21",
         description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
     },
     {
-        title: "Lead Product Designer @ Visit.Page",
+        title: "Ssr. Frontend Developer",
+        company: "Artear",
+        website: "https://www.artear.com/es/",
         subtitle: "Jan '18 - Oct '21",
         description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
     }
@@ -28,17 +34,23 @@ const experience = [
 
 const education = [
     {
-        title: "Lead Product Designer @ Visit.Page",
+        title: "Ssr. Frontend Developer",
+        company: "Artear",
+        website: "https://www.artear.com/es/",
         subtitle: "Jan '18 - Oct '21",
         description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
     },
     {
-        title: "Lead Product Designer @ Visit.Page",
+        title: "Ssr. Frontend Developer",
+        company: "Artear",
+        website: "https://www.artear.com/es/",
         subtitle: "Jan '18 - Oct '21",
         description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
     },
     {
-        title: "Lead Product Designer @ Visit.Page",
+        title: "Ssr. Frontend Developer",
+        company: "Artear",
+        website: "https://www.artear.com/es/",
         subtitle: "Jan '18 - Oct '21",
         description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
     }
@@ -46,17 +58,23 @@ const education = [
 
 const features = [
     {
-        title: "Lead Product Designer @ Visit.Page",
+        title: "Ssr. Frontend Developer",
+        company: "Artear",
+        website: "https://www.artear.com/es/",
         subtitle: "Jan '18 - Oct '21",
         description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
     },
     {
-        title: "Lead Product Designer @ Visit.Page",
+        title: "Ssr. Frontend Developer",
+        company: "Artear",
+        website: "https://www.artear.com/es/",
         subtitle: "Jan '18 - Oct '21",
         description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
     },
     {
-        title: "Lead Product Designer @ Visit.Page",
+        title: "Ssr. Frontend Developer",
+        company: "Artear",
+        website: "https://www.artear.com/es/",
         subtitle: "Jan '18 - Oct '21",
         description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
     }
