@@ -11,7 +11,7 @@ function Footer() {
                     <Social />
                 </div>
                 <div className="copyright">
-                    © 2023,Copyright 2020. Rainbow Themes.
+                    © 2023 Emmanuel Nocera.
                 </div>
             </div>
         </footer>

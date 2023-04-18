@@ -30,7 +30,7 @@ const projects = [
 
 function Projects({...rest}) {
     return (
-        <section className="projects" {...rest}>
+        <section className="projects pt-5" {...rest}>
             <div className="container">
                 <ul className="project-list">
                     {projects && projects.map((project) => (

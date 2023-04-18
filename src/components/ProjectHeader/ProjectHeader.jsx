@@ -10,10 +10,10 @@ function ProjectHeader() {
                     <div className="col-lg-6 details">
 
                         <ul className="detail-list">
-                            <li><label>{t("project.category")}: </label><span>Project Category</span></li>
-                            <li><label>{t("project.client")}: </label><span>Client Name</span></li>
-                            <li><label>{t("project.live_link")}: </label><span>Live link</span></li>
-                            <li><label>{t("project.source_code")}: </label><span>Github link?</span></li>
+                            <li><span className="category">Project Category</span></li>
+                            <li><label>{t("project.client")}</label><a href="">Client Name</a></li>
+                            <li><a href="">Watch Online</a></li>
+                            <li><a href="">Inspect source code</a></li>
                         </ul>
                     </div>
                     <div className="col-lg-6">
