@@ -11,6 +11,10 @@
     li {
         width: 100%;
         max-width: calc(50% - 20px);  
+
+        @media (max-width: 767px) {
+            max-width: 100%; 
+        }
     }
 }
 
@@ -30,12 +34,19 @@
     
     .title {
         margin: 0 0 10px;
+        @media (max-width: 767px) {
+            font-size: 21px;
+        }
+
     }
 
     .category {
         font-size: 18px;
         color: $color-gray;
         font-weight: 500;
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
     }
 
     &:hover {
@@ -55,6 +66,9 @@
     display: flex;
     background: url('../assets/computadora-cafe.jpg') no-repeat center bottom;
     background-size: 1400px;
+    @media (max-width: 767px) {
+        padding: 100px 0 60px;
+    }
 
     .container {
         margin-top: auto;
@@ -64,11 +78,17 @@
             font-size: 52px;
             color: #fff;
             margin-bottom: 15px;
+            @media (max-width: 767px) {
+                font-size: 36px;
+            }
         }
 
         .category {
             font-weight: 300;
             margin-bottom: 30px;
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
         }
 
         .details {
@@ -76,9 +96,13 @@
             margin-bottom: 20px;
             .detail-list {
                 margin: auto 0;
+                
                 li {
                     font-size: 20px;
                     margin-bottom: 10px;
+                    @media (max-width: 767px) {
+                        font-size: 18px;
+                    }
 
                     label {
                         color: #fff;
@@ -95,6 +119,9 @@
 
         .description {
             font-size: 22px;
+            @media (max-width: 767px) {
+                font-size: 18px;
+            }
         }
     }
 

@@ -2,10 +2,17 @@
     background: url('../assets/computadora-cafe.jpg') no-repeat center bottom;
     background-size: 1400px;
     .container {
-        //padding: 200px 0;
+        padding-top: 160px;
+        padding-bottom: 160px;
         display: flex;
-        min-height: 90vh;
+        min-height: calc(100vh - 320px);
         flex-direction: column;
+
+        @media (max-width: 767px) {
+            min-height: auto;
+            padding-top: 100px;
+            padding-bottom: 30px;
+        }
 
         .wrapper {
             margin: auto 0;
@@ -13,6 +20,13 @@
                 font-size: 64px;
                 margin-bottom: 30px;
                 max-width: 90%;
+                @media (max-width: 991px) {
+                    font-size: 48px;
+                }
+
+                @media (max-width: 767px) {
+                    font-size: 32px;
+                }
             }
 
             

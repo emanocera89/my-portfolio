@@ -42,6 +42,9 @@
         font-size: 18px;
         font-weight: 700;
         text-transform: uppercase;
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
     }
 
     .toggle-button {
@@ -64,6 +67,9 @@
         display: inline-flex;
         margin-left: auto;
         margin-right: 30px;
+        @media (max-width: 767px) {
+            margin-right: 10px;
+        }
 
         button {
             background: transparent;
@@ -74,6 +80,9 @@
             font-weight: 500;
             position: relative;
             margin: 0 10px;
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
 
             &.active {
                 color: #fff;
@@ -112,6 +121,9 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 10px;
+            @media (max-width: 767px) {
+                font-size: 48px;
+            }
         }
     }
 }
