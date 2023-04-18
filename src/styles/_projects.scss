@@ -63,6 +63,11 @@
         .title {
             font-size: 52px;
             color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .category {
+            font-weight: 300;
             margin-bottom: 30px;
         }
 
@@ -88,13 +93,15 @@
 
         }
 
-        
-
-    
-
         .description {
             font-size: 22px;
         }
     }
 
+}
+
+.project-media {
+    .media-container {
+        margin-bottom: 100px;
+    }
 }

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-function ContactInfo() {
+function ContactInfo({ data }) {
     const [t] = useTranslation("global");
 
     return (
@@ -8,15 +8,15 @@ function ContactInfo() {
             <h3>{t("contact.title")}</h3>
             <div className="contact-item">
                 <label>{t("contact.whatsapp")}</label>
-                <a href="/"><h5>+54 11 3645 2881</h5></a>
+                <a href={`https://web.whatsapp.com/send?phone=${data && data.phone}`} target="_blank" rel="noreferrer"><h5>{data && data.phone}</h5></a>
             </div>
             <div className="contact-item">
                 <label>{t("contact.email")}</label>
-                <a href="/"><h5>contact@emmanuelnocera.com</h5></a>
+                <a href={`mailto:${data && data.email}`}><h5>{data && data.email}</h5></a>
             </div>
             <div className="contact-item">
                 <label>{t("contact.office")}</label>
-                <h5>Buenos Aires, Argentina</h5>
+                <h5>{data && data.location}</h5>
             </div>
         </div>
     )

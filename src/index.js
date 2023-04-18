@@ -11,9 +11,30 @@ import i18next from 'i18next';
 import global_es from './translations/es/global.json';
 import global_en from './translations/en/global.json';
 
-const lang = localStorage.getItem('lang');
-console.log(lang);
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDN0hf2VUzqGqa0DsVqAVWxnfK7CUHgseA",
+  authDomain: "portfolio-enocera.firebaseapp.com",
+  projectId: "portfolio-enocera",
+  storageBucket: "portfolio-enocera.appspot.com",
+  messagingSenderId: "18971018694",
+  appId: "1:18971018694:web:21607858810bc263da5ec7"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+const lang = localStorage.getItem('lang');
+//console.log(lang);
+
+
+// language
 i18next.init({
   interpolation: { escapeValue: false },
   lng: lang,

@@ -24,7 +24,7 @@ function Navbar() {
     return (
         <header className={`navbar ${darkClass}`}>
             <div className="container">
-                <div className="logo">Emmanuel Nocera</div>
+                <a href="/" className="logo">Emmanuel Nocera</a>
                 <LangSelector />
                 <Menu />
             </div>

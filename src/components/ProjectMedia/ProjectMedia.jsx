@@ -1,8 +1,12 @@
-function ProjectMedia() {
+function ProjectMedia({ project }) {
+    const baseUrl = "https://www.emmanuelnocera.com/resources/"
     return (
         <div className="project-media">
             <div className="container">
-                <img src="https://arlo-jackson-brown.netlify.app/static/21af964915f9f474debe3fb9afc1b0c8/a5acb/project-04.webp" alt="project test" width="100%" />
+                {project && project.media_images && project.media_images.map((img, idx) => (
+                    <div className="media-container"><img src={baseUrl + img} alt={project.name} width="100%" /></div>
+                ))}
+                
             </div>
         </div>
     )

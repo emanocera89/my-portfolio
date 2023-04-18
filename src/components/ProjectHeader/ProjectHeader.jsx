@@ -1,23 +1,43 @@
 import { useTranslation } from "react-i18next";
 
-function ProjectHeader() {
+function ProjectHeader({ project }) {
     const [t] = useTranslation("global");
+    const lang = localStorage.getItem("lang");
     return (
         <div className="project-header">
             <div className="container">
-                <h2 className="title">Project Name</h2>
+                <h2 className="title">{project && project.name}</h2>
+                <h4 className="category">{project && project.type}</h4>
                 <div className="row">
                     <div className="col-lg-6 details">
 
                         <ul className="detail-list">
-                            <li><span className="category">Project Category</span></li>
-                            <li><label>{t("project.client")}</label><a href="">Client Name</a></li>
-                            <li><a href="">Watch Online</a></li>
-                            <li><a href="">Inspect source code</a></li>
+
+                            {project && project.client &&
+                                <li><label>{t("project.client")}</label><a href={project.client_url ? project.client_url : "#"} target="_blank" rel="noreferrer">{project.client}</a></li>
+                            }
+                            {project && project.live_view &&
+                                <li><a href={project.live_view} target="_blank" rel="noreferrer">{t("project.watch_online")}</a></li>
+                            }
+                            {project && project.source_code &&
+                                <li><a href={project.source_code} target="_blank" rel="noreferrer">{t("project.source_code")}</a></li>
+                            }
+                            <li>
+                                {project && project.tools_used && project.tools_used.map((i, id) => (
+                                    <label className="tag">{i}</label>
+                                ))}
+                            </li>
                         </ul>
                     </div>
                     <div className="col-lg-6">
-                        <p className="description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        <p className="description">
+                            {project &&
+                                {
+                                    'es': project.description_es,
+                                    'en': project.description_en
+                                }[lang]
+                            }
+                        </p>
                     </div>
                 </div>
             </div>

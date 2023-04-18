@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
-const projects = [
+/*const projects = [
     {
         id: '0',
         name: 'Project Test',
@@ -25,10 +27,29 @@ const projects = [
         category: 'Client Project',
         img: 'https://arlo-jackson-brown.netlify.app/static/21af964915f9f474debe3fb9afc1b0c8/a5acb/project-04.webp'
     }
-]
+]*/
 
 
 function Projects({...rest}) {
+
+    const [projects, setProjects] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const getProjects = () => {
+        setIsLoading(true);
+        const db = getFirestore();
+        const projectsCollection = collection(db, "projects");
+        getDocs(projectsCollection).then((snapshot) => {
+            setProjects(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+            setIsLoading(false);
+        })
+    }
+
+    useEffect(() => {
+        getProjects();
+    }, [])
+
+
     return (
         <section className="projects pt-5" {...rest}>
             <div className="container">
