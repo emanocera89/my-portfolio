@@ -7,6 +7,7 @@ import PersonalInfo from "../../components/PersonalInfo/PersonalInfo";
 import ResumeNav from "../../components/ResumeNav/ResumeNav";
 import { useTranslation } from "react-i18next";
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import LangSelector from '../../components/LangSelector/LangSelector';
 
 const about = "I’m an independent visual designer. For the last 7 years I’ve been crafting world class digital experiences. Currently based in Lisbon, Portugal."
 
@@ -105,6 +106,8 @@ function Resume() {
         <>
             <ResumeNav />
             <div className="resume">
+                <div className="container lang-mobile"><LangSelector /></div>
+                
                 <PersonalInfo data={personalInfo} />
                 <div className="container">
                     <div className="row">
