@@ -4,12 +4,22 @@ import Navbar from "../../components/Navbar/Navbar";
 import ProjectHeader from "../../components/ProjectHeader/ProjectHeader";
 import ProjectMedia from "../../components/ProjectMedia/ProjectMedia";
 import { useParams, useLocation } from 'react-router-dom';
-import { getDoc, doc, getFirestore } from 'firebase/firestore';
+import { collection, getDocs, getDoc, doc, getFirestore } from 'firebase/firestore';
 
 function ProjectDetail() {
     const params = useParams();
     const [project, setProject] = useState();
     const [isLoading, setIsLoading] = useState(false);
+    const [personalInfo, setPersonalInfo] = useState();
+
+    const getPersonalInfo = () => {
+      const db = getFirestore();
+      const personalInfoCollection = collection(db, "personal-info");
+      getDocs(personalInfoCollection).then((snapshot) => {
+        const allData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        setPersonalInfo(allData[0]);
+      })
+    }
 
     const getProject = () => {
         window.scrollTo({ top: 0, behavior: 'instant' });
@@ -30,6 +40,7 @@ function ProjectDetail() {
     }
 
     useEffect(() => {
+        getPersonalInfo();
         getProject();
     }, [params]);
 
@@ -40,7 +51,7 @@ function ProjectDetail() {
             <Navbar />
             <ProjectHeader project={project} />
             <ProjectMedia project={project} />
-            <Footer />
+            <Footer data={personalInfo} />
         </>
     )
 }
