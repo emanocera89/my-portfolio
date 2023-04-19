@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -30,10 +30,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 
-const lang = localStorage.getItem('lang');
-//console.log(lang);
-
-
+const lsLang = localStorage.getItem('lang');
+const lang = lsLang ? lsLang : 'en';
+localStorage.setItem('lang', lang);
 // language
 i18next.init({
   interpolation: { escapeValue: false },
