@@ -5,11 +5,12 @@ import ProjectHeader from "../../components/ProjectHeader/ProjectHeader";
 import ProjectMedia from "../../components/ProjectMedia/ProjectMedia";
 import { useParams, useLocation } from 'react-router-dom';
 import { collection, getDocs, getDoc, doc, getFirestore } from 'firebase/firestore';
+import Loader from "../../components/Loader/Loader";
 
 function ProjectDetail() {
     const params = useParams();
     const [project, setProject] = useState();
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const [personalInfo, setPersonalInfo] = useState();
 
     const getPersonalInfo = () => {
@@ -33,7 +34,6 @@ function ProjectDetail() {
             if (snapshot.exists()) {
                 const results = [snapshot.data()];
                 setProject(results[0]);
-                console.log("results", results[0]);
                 setIsLoading(false);
             }
         })
@@ -47,6 +47,9 @@ function ProjectDetail() {
 
 
     return (
+        isLoading ?
+        <Loader />
+        :
         <>
             <Navbar />
             <ProjectHeader project={project} />

@@ -8,6 +8,7 @@ import ResumeNav from "../../components/ResumeNav/ResumeNav";
 import { useTranslation } from "react-i18next";
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import LangSelector from '../../components/LangSelector/LangSelector';
+import Loader from '../../components/Loader/Loader';
 
 const about = "I’m an independent visual designer. For the last 7 years I’ve been crafting world class digital experiences. Currently based in Lisbon, Portugal."
 
@@ -85,16 +86,19 @@ const features = [
 
 function Resume() {
     const [personalInfo, setPersonalInfo] = useState();
+    const [isLoading, setIsLoading] = useState(true);
     const [t] = useTranslation("global");
     const lang = localStorage.getItem("lang");
 
   const getPersonalInfo = () => {
+    setIsLoading(true);
     const db = getFirestore();
     const personalInfoCollection = collection(db, "personal-info");
     getDocs(personalInfoCollection).then((snapshot) => {
       console.log('personal-info', snapshot.docs[0])
       const allData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       setPersonalInfo(allData[0]);
+      setIsLoading(false);
     })
   }
 
@@ -103,6 +107,9 @@ function Resume() {
   }, [])
     
     return (
+        isLoading ?
+        <Loader backgroundColor='#fff' color='#000' />
+        :
         <>
             <ResumeNav />
             <div className="resume">
