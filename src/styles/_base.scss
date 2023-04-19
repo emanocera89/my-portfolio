@@ -32,3 +32,34 @@ a:hover {
         padding-right: 30px;
     }
 }
+
+.swal-modal {
+    .swal-title {
+        color: #000;
+    }
+    .swal-text {
+        color: #000;
+    }
+    .swal-footer {
+        text-align: center;
+        .swal-button {
+            outline: none;
+            box-shadow: none;
+            font-size: 16px;
+            background-color: $color-primary;
+        }
+    }
+    .swal-icon--success__line {
+        background-color: $color-success;
+    }
+    .swal-icon--success,
+    .swal-icon--success__ring {
+        border-color: $color-success;
+    }
+    .swal-icon--error__line {
+        background-color: $color-error;
+    }
+    .swal-icon--error {
+        border-color: $color-error;
+    }
+}

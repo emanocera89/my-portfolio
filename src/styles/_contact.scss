@@ -94,5 +94,11 @@
             background-color: #f9004d;
             color: #fff;
         }
+
+        &[disabled]{
+            color: #fff;
+            border-color: $color-gray;
+            background-color: $color-gray;
+        }
     }
 }

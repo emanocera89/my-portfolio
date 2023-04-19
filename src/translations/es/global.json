@@ -19,7 +19,12 @@
         "full_name": "Nombre completo",
         "subject": "Asunto",
         "message": "Mensaje",
-        "submit": "Enviar"
+        "submit": "Enviar",
+        "sending": "Enviando...",
+        "submit_success_title": "Tu mensaje se ha enviado correctamente",
+        "submit_success_subtitle": "Pronto me estaré poniendo en contacto contigo.",
+        "submit_error_title": "Tu mensaje no pudo ser enviado",
+        "submit_error_subtitle": "Intenta enviar tu mensaje nuevamente."
     },
     "footer": {
         "title": "Trabajemos juntos en tu siguiente proyecto"
