@@ -123,7 +123,7 @@ function Resume() {
                             <Experience sectionTitle={t("resume.experience")} data={personalInfo && personalInfo.experience} id="experience" lang={lang} />
                             <Experience sectionTitle={t("resume.education")} data={personalInfo && personalInfo.education} id="education" lang={lang} />
                             <Experience sectionTitle={t("resume.features")} data={features} id="features" lang={lang} />
-                            <ContactList id="contact" sectionTitle={t("resume.contact")} />
+                            <ContactList data={personalInfo} id="contact" sectionTitle={t("resume.contact")} />
                         </div>
                     </div>
                 </div>
