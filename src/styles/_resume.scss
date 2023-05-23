@@ -9,8 +9,10 @@
     }
 
     p {
-        font-size: 18px;
+        font-size: 16px;
     }
+
+    
 
     .lang-mobile {
         display: none;
@@ -43,11 +45,25 @@
             font-size: 20px;
         }*/
 
-        padding-bottom: 50px;
+        padding-bottom: 30px;
+
+        a {
+            color: $color-secondary;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style:disc;
+            padding-left: 16px;
+            li {
+                font-size: 16px;
+            }
+        }
 
         h3 {
             font-size: 28px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             font-weight: 600;
         }
 
@@ -70,6 +86,17 @@
                 font-size: 16px;
                 margin-bottom: 20px;
                 display: block;
+
+                .type {
+                    margin-left: 15px;
+                    padding-left: 15px;
+                    position: relative;
+                    &:before {
+                        content: '•';
+                        position: absolute;
+                        left: -5px;
+                    }
+                }
             }
         }
 
@@ -127,27 +154,40 @@
         }
 
         .fullname {
-            font-size: 28px;
+            font-size: 26px;
             margin-bottom: 0;
         }
 
         .profession {
             color: $color-secondary;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
         }
 
         .location {
-            font-size: 18px;
+            font-size: 17px;
         }
 
         a {
             font-size: 16px;
             color: #666666;
             text-decoration: underline;
+            display: table;
         }
 
 
+    }
+
+    .skill-list {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0 !important;
+        margin-bottom: 30px;
+
+        li {
+            display: inline-flex;
+        }
     }
 }
 

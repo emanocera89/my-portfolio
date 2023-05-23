@@ -9,7 +9,8 @@
         "category": "Categoría",
         "client": "Hecho para",
         "watch_online": "Ver online",
-        "source_code": "Código fuente"
+        "source_code": "Código fuente",
+        "type": { "client_project": "Para cliente", "experimental": "Experimental" }
     },
     "contact": {
         "title": "Contacto",
@@ -34,7 +35,8 @@
         "experience": "Experiencia",
         "education": "Educación",
         "features": "Features",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "lang": "Idiomas"
     },
     "labels": {
         "spanish": "ESP",

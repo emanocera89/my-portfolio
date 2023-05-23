@@ -10,7 +10,7 @@ import Loader from '../../components/Loader/Loader';
 function Home() {
   const [personalInfo, setPersonalInfo] = useState();
   const [isLoading, setIsLoading] = useState(true);
-
+  const lang = localStorage.getItem("lang");
   const getPersonalInfo = () => {
     const db = getFirestore();
     const personalInfoCollection = collection(db, "personal-info");

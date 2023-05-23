@@ -23,7 +23,7 @@ function ResumeNav() {
                 <ul className="rt-nav ms-auto">
                     <li><a href="/resume#experience">{t("resume.experience")}</a></li>
                     <li><a href="/resume#education">{t("resume.education")}</a></li>
-                    <li><a href="/resume#features">{t("resume.features")}</a></li>
+                    <li><a href="/resume#languages">{t("resume.lang")}</a></li>
                     <li><a href="/resume#contact">{t("resume.contact")}</a></li>
                 </ul>
             </nav>

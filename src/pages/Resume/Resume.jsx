@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import LangSelector from '../../components/LangSelector/LangSelector';
 import Loader from '../../components/Loader/Loader';
+import Skills from '../../components/Skills/Skills';
 
 const about = "I’m an independent visual designer. For the last 7 years I’ve been crafting world class digital experiences. Currently based in Lisbon, Portugal."
 
@@ -122,7 +123,8 @@ function Resume() {
                             <AboutMe data={personalInfo} id="about" sectionTitle={t("resume.about_me")} lang={lang}/>
                             <Experience sectionTitle={t("resume.experience")} data={personalInfo && personalInfo.experience} id="experience" lang={lang} />
                             <Experience sectionTitle={t("resume.education")} data={personalInfo && personalInfo.education} id="education" lang={lang} />
-                            <Experience sectionTitle={t("resume.features")} data={features} id="features" lang={lang} />
+                            <Skills sectionTitle="Skills" data={personalInfo && personalInfo.skills} />
+                            <Experience sectionTitle={t("resume.lang")} data={personalInfo && personalInfo.languages} id="languages" lang={lang} />
                             <ContactList data={personalInfo} id="contact" sectionTitle={t("resume.contact")} />
                         </div>
                     </div>

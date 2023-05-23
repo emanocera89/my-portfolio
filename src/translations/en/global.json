@@ -9,7 +9,8 @@
         "category": "Category",
         "client": "Made for",
         "watch_online": "Watch Online",
-        "source_code": "Source code"
+        "source_code": "Source code",
+        "type": { "client_project": "Client Project", "experimental": "Experimental" }
     },
     "contact": {
         "title": "Contact",
@@ -34,7 +35,8 @@
         "experience": "Experience",
         "education": "Education",
         "features": "Features",
-        "contact": "Contact"
+        "contact": "Contact",
+        "lang": "Languages"
     },
     "labels": {
         "spanish": "SPA",

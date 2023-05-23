@@ -1,3 +1,4 @@
+import parse from 'html-react-parser';
 function AboutMe({ sectionTitle, data, lang, ...rest }) {
     return (
         <div className="resume-item" {...rest}>
@@ -5,8 +6,8 @@ function AboutMe({ sectionTitle, data, lang, ...rest }) {
             <p className="about-text">
                 {data &&
                     {
-                        'es': data.cv_about_es,
-                        'en': data.cv_about_en
+                        'es': parse(data.cv_about_es),
+                        'en': parse(data.cv_about_en)
                     }[lang]
                 }
             </p>

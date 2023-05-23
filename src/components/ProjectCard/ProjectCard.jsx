@@ -1,14 +1,35 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function ProjectCard({ project }) {
+    const [t] = useTranslation("global");
+    const lang = localStorage.getItem("lang");
     return (
-        <Link to={`/p/${project && project.id}`} className="project-card">
+        <a href={project && project.live_view} className="project-card" target="_blank" rel="noreferrer">
             <div className="image-wrapper">
                 <img className="image" src={project && project.cover} alt={project && project.name} />
             </div>
-            <h4 className="title">{project && project.name}</h4>
-            <span className="category">{project && project.type}</span>
-        </Link>
+            <div className="d-flex">
+                <div className="project-info">
+                    <h4 className="title">{project && project.name}</h4>
+                    <span className="category">
+                        {project &&
+                            {
+                                'Client Project': t("project.type.client_project"),
+                                'Experimental': t("project.type.experimental")
+                            }[project.type]
+                        }
+
+                    </span>
+                </div>
+                <div className="project-features ms-auto">
+                    {project && project.tools_used && project.tools_used.slice(0, 5).map((i, id) => (
+                        <label className="tag">{i}</label>
+                    ))}
+                </div>
+            </div>
+
+        </a>
     )
 }
 
