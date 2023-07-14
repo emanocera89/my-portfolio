@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+
 function LangSelector() {
     const [t, i18n] = useTranslation("global");
     let currentLang = localStorage.getItem('lang');
@@ -6,6 +7,7 @@ function LangSelector() {
     const handleChangeLang = (e, lang) => {
         i18n.changeLanguage(lang);
         localStorage.setItem('lang', lang);
+        window.location.reload();
         //alert(lang);
     }
     return (
