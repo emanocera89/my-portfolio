@@ -55,7 +55,7 @@ function Projects({...rest}) {
             <div className="container">
                 <ul className="project-list">
                     {projects && projects.map((project) => (
-                        <li><ProjectCard project={project} /></li>
+                        <li key={project.id}><ProjectCard project={project} /></li>
                     ))}
                 </ul>
             </div>

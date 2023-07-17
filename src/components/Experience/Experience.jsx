@@ -4,8 +4,8 @@ function Experience({ sectionTitle = 'Default Title', data, lang, ...rest }) {
     return (
         <div className="resume-item" {...rest}>
             <h3>{sectionTitle}</h3>
-            {data && data.map((item) => (
-                <div className="experience-item">
+            {data && data.map((item, index) => (
+                <div className="experience-item" key={item.index}>
                     <div className='header'>
                         {item.image &&
                             <div className='img-wrapper'>

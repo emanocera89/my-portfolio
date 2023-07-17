@@ -21,7 +21,7 @@ function Resume() {
     const db = getFirestore();
     const personalInfoCollection = collection(db, "personal-info");
     getDocs(personalInfoCollection).then((snapshot) => {
-      console.log('personal-info', snapshot.docs[0])
+      //console.log('personal-info', snapshot.docs[0])
       const allData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       setPersonalInfo(allData[0]);
       setIsLoading(false);

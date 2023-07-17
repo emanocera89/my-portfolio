@@ -24,7 +24,7 @@ function ProjectCard({ project }) {
                 </div>
                 <div className="project-features ms-auto">
                     {project && project.tools_used && project.tools_used.slice(0, 5).map((i, id) => (
-                        <label className="tag">{i}</label>
+                        <label key={id} className="tag">{i}</label>
                     ))}
                 </div>
             </div>

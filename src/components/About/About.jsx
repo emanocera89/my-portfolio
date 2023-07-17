@@ -9,10 +9,8 @@ function About({ data, ...rest }) {
     const lang = i18n.language;
 
     useEffect(() => {
-        console.log('test');
         switch (lang) {
             case 'es':
-                
                 setTextToShow(data.about_description_es);
                 break;
             case 'en':
