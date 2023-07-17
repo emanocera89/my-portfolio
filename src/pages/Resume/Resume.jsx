@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import AboutMe from "../../components/AboutMe/AboutMe";
 import ContactList from "../../components/ContactList/ContactList";
 import Experience from "../../components/Experience/Experience";
-import Navbar from "../../components/Navbar/Navbar";
 import PersonalInfo from "../../components/PersonalInfo/PersonalInfo";
 import ResumeNav from "../../components/ResumeNav/ResumeNav";
 import { useTranslation } from "react-i18next";
@@ -10,80 +9,6 @@ import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import LangSelector from '../../components/LangSelector/LangSelector';
 import Loader from '../../components/Loader/Loader';
 import Skills from '../../components/Skills/Skills';
-
-const about = "I’m an independent visual designer. For the last 7 years I’ve been crafting world class digital experiences. Currently based in Lisbon, Portugal."
-
-const experience = [
-    {
-        title: "Ssr. Frontend Developer",
-        company: "Artear",
-        website: "https://www.artear.com/es/",
-        subtitle: "Jan '18 - Oct '21",
-        description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
-    },
-    {
-        title: "Lead UI Designer",
-        company: "Contabilium",
-        website: "https://www.contabilium.com",
-        subtitle: "Jan '18 - Oct '21",
-        description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
-    },
-    {
-        title: "Ssr. Frontend Developer",
-        company: "Artear",
-        website: "https://www.artear.com/es/",
-        subtitle: "Jan '18 - Oct '21",
-        description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
-    }
-]
-
-const education = [
-    {
-        title: "Ssr. Frontend Developer",
-        company: "Artear",
-        website: "https://www.artear.com/es/",
-        subtitle: "Jan '18 - Oct '21",
-        description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
-    },
-    {
-        title: "Ssr. Frontend Developer",
-        company: "Artear",
-        website: "https://www.artear.com/es/",
-        subtitle: "Jan '18 - Oct '21",
-        description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
-    },
-    {
-        title: "Ssr. Frontend Developer",
-        company: "Artear",
-        website: "https://www.artear.com/es/",
-        subtitle: "Jan '18 - Oct '21",
-        description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
-    }
-]
-
-const features = [
-    {
-        title: "Ssr. Frontend Developer",
-        company: "Artear",
-        website: "https://www.artear.com/es/",
-        subtitle: "Jan '18 - Oct '21",
-        description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
-    },
-    {
-        title: "Ssr. Frontend Developer",
-        company: "Artear",
-        website: "https://www.artear.com/es/",
-        subtitle: "Jan '18 - Oct '21",
-        description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
-    },
-    {
-        title: "Ssr. Frontend Developer",
-        company: "Artear",
-        website: "https://www.artear.com/es/",
-        subtitle: "Jan '18 - Oct '21",
-        description: "Designing a social platform to help salespeople exchange insights anonymously & hit sales goals faster."
-    }
-]
 
 function Resume() {
     const [personalInfo, setPersonalInfo] = useState();
