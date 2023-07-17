@@ -25,6 +25,7 @@ function ResumeNav() {
                     <li><a href="/resume#education">{t("resume.education")}</a></li>
                     <li><a href="/resume#languages">{t("resume.lang")}</a></li>
                     <li><a href="/resume#contact">{t("resume.contact")}</a></li>
+                    <li><a href="https://www.emmanuelnocera.com/resources/CV_Espanol_2023.pdf" target="_blank" className="btn btn-primary" rel="noreferrer">{t("resume.downloadPdf")}</a></li>
                 </ul>
             </nav>
         </header>

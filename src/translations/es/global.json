@@ -36,7 +36,8 @@
         "education": "Educación",
         "features": "Features",
         "contact": "Contacto",
-        "lang": "Idiomas"
+        "lang": "Idiomas",
+        "downloadPdf": "Descargar PDF"
     },
     "labels": {
         "spanish": "ESP",

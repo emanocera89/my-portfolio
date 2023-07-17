@@ -39,7 +39,7 @@ function Resume() {
         <>
             <ResumeNav />
             <div className="resume">
-                <div className="container lang-mobile"><LangSelector /></div>
+                <div className="container nav-mobile"><LangSelector /> <a href="https://www.emmanuelnocera.com/resources/CV_Espanol_2023.pdf" target="_blank" className="btn btn-primary btn-download" rel="noreferrer">{t("resume.downloadPdf")}</a></div>
                 
                 <PersonalInfo data={personalInfo} />
                 <div className="container">

@@ -36,7 +36,8 @@
         "education": "Education",
         "features": "Features",
         "contact": "Contact",
-        "lang": "Languages"
+        "lang": "Languages",
+        "downloadPdf": "Download PDF"
     },
     "labels": {
         "spanish": "SPA",
